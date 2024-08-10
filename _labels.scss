@@ -1,30 +1,21 @@
-/*           Labels & Progress-bar              */
-.label{
-    padding: 0.2em 0.6em;
-    border-radius: 10px;
-    color: #FFFFFF;
-    font-weight: 500;
-    font-size: 0.75em;
-    text-transform: uppercase;
-    display: inline-block;
-    margin-bottom: 3px;
-    line-height: 17px;
+@mixin label-style(){
+     padding: $padding-label-vertical $padding-label-horizontal;
+     border: 1px solid $default-color;
+     border-radius: $border-radius-small;
+     color: $default-color;
+     font-weight: $font-weight-semi;
+     font-size: $font-size-small;
+     text-transform: uppercase;
+     display: inline-block;
+     vertical-align: middle;
 }
-.label-primary{
-    background-color: $primary-color;
+
+@mixin label-color($color){
+     border-color: $color;
+     color: $color;
 }
-.label-info{
-    background-color: $info-color;
-}
-.label-success{
-    background-color: $success-color;
-}
-.label-warning{
-    background-color: $warning-color;
-}
-.label-danger{
-    background-color: $danger-color;
-}
-.label-default{
-    background-color: $default-color;
+@mixin label-color-fill($color){
+     border-color: $color;
+     color: $white-color;
+     background-color: $color;
 }
